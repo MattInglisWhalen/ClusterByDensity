@@ -61,7 +61,7 @@ make_opts <- function(x_positions,
   nY <- (yMax-yMin)/resolution
 
   if(nX*nY > 5000){
-    message(sprintf("CBD: Careful with the choice of resolution! Currently working with $i pixels, which might take forever to complete!",nX*nY))
+    message(sprintf("CBD: Careful with the choice of resolution! Currently working with %i pixels, which might take forever to complete!",nX*nY))
   }
 
   grid_content <- c()
