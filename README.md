@@ -36,4 +36,20 @@ Option 3) Simply copy the four .R files in the `R` directory into your working d
 
 ## Usage
 
+There are 3 core functions that are exposed by this package.
+
+1. `make_opts` : This sets up the options for the algorithm and returns a single object to store all the required information.
+
+2. `find_peaks` : This takes as input the `opts` object returned from `make_opts()` and returns an object with information about the location of clusters in the data.
+
+3. `print_peaks` : This takes as input the `peaks` object returned from `find_peaks` and prints its contents in a human-readable format
+
+There are a further 2 non-core functions that can help visualize the data and peak-finding results, provided that the `plotrix` package is installed on your machine.
+
+4. `plot_heatmap` : Shows a heatmap of the 2D dataset.
+
+5. `plot_peaks` : Shows the results of the `find_peaks` algorithm as ellipsoids.
+
+You can further examine the examples in the repository
+
 

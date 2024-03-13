@@ -25,5 +25,6 @@ plot_peaks(
 }
 \description{
 Using the \code{peaks} object that is returned from the \code{find_peaks()} function,
-plot each cluster as an ellipsoid based off the constituent pixels of that cluster
+plot each cluster as an ellipsoid based off the constituent pixels of that cluster.
+The original datapoints are overlaid as an inefficient scatterplot.
 }

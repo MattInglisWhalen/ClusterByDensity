@@ -14,5 +14,9 @@ plot_heatmap(opts, overtitle = "Point Heatmap", show_frame = FALSE)
 \item{show_frame}{Boolean for whether to show the bounding region and xy axes}
 }
 \description{
-Plot heatmap of 2D point dataset
+Very inefficient implementation of a heatmap plotting algorithm. A rect is
+drawn to the screen for each pixel, where the density of a pixel is calculated
+by convolving all points with a Guassian kernel and sampling at the pixel's center.
+Pixel resolution and Gaussian smear_size are stored in the \code{opts} object created
+by the \code{make_opts()} function, which should be called first.
 }
