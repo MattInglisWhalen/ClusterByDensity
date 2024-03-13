@@ -1,0 +1,22 @@
+Package: 
+    ClusterByDensity
+Title: 
+    Cluster 2D Points by Finding Peaks in Density
+Version: 
+    1.0
+Authors@R: 
+    person("Matthew", "Inglis-Whalen", , "mingliswhalen@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5734-7070"))
+Description: 
+    A package which implements a clustering algorithm for 
+    2D point-spread datasets. Additional functionality includes data visualization 
+    through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+URL: 
+    https://github.com/MattInglisWhalen/ClusterByDensity
+Suggests: 
+    plotrix
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
