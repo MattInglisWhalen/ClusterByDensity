@@ -85,7 +85,7 @@ You may cite this package as
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/MattInglisWhalen/ClusterByDensity}},
-  commit = {4f57d6a0e4c030202a07a60bc1bb1ed1544bf679}
+  commit = {04985076509bb2fca774b5b96d976c3de6a64454}
 }
 ```
 
