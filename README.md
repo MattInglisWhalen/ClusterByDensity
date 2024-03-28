@@ -2,13 +2,15 @@
 
  A package which implements a clustering algorithm for 2D point-spread datasets. Additional functionality includes data visualization through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
 
+ !["Heatmap with overlaid cluster ellipses"](/images/_final_product.png "ClusterByDensitySample")
+
 ## Installation
 
 Option 1) Use the `devtools` library. 
 
 If you don't have devtools already installed, type
 
-> install('remote')
+> install('devtools')
 
 into your R console. Then, also on the command line, type
 
@@ -17,22 +19,32 @@ into your R console. Then, also on the command line, type
 The package should now be usable.
 
 
-Option 2) Use the `remote` library. 
+Option 2) Use the `remotes` library. 
 
-I've been told that this is preferable to devtools, since `remote` is smaller and easier to install. If you don't already have `remote`, use R's command line to type
+I've been told that this is preferable to devtools, since `remotes` is smaller and easier to install. If you don't already have `remotes` installed, use R's command line to type
 
-> install('remote')
+> install('remotes')
 
 Then, also on the command line, type
 
-> remote::install_github("MattInglisWhalen/ClusterByDensity")
+> remotes::install_github("MattInglisWhalen/ClusterByDensity")
 
 The package should now be usable.
 
-Option 3) Simply copy the four .R files in the `R` directory into your working directory. For clustering only, add
+Option 3) Copy/paste the source files.
 
-> source('cluster_by_density.R') to the top of your 
+Simply copy the four .R files in this repository's `R` directory into your working directory. Uncomment each of the `source` commands at the top of these four files. For clustering only, add
 
+```
+source('cbd_options.R')
+source('cbd_peak_finding.R')
+```
+
+to the top of your analysis code. If you also need purpose-built plotting capabilities, and have also installed the `plotrix` package, also include 
+
+```
+source('cbd_plotting.R')
+```
 
 ## Usage
 
@@ -40,7 +52,7 @@ There are 3 core functions that are exposed by this package.
 
 1. `make_opts` : This sets up the options for the algorithm and returns a single object to store all the required information.
 
-2. `find_peaks` : This takes as input the `opts` object returned from `make_opts()` and returns an object with information about the location of clusters in the data.
+2. `find_peaks` : This takes as input the `opts` object returned from `make_opts()` and returns a `peaks` object with information about the location of clusters in the data.
 
 3. `print_peaks` : This takes as input the `peaks` object returned from `find_peaks` and prints its contents in a human-readable format
 
@@ -50,6 +62,30 @@ There are a further 2 non-core functions that can help visualize the data and pe
 
 5. `plot_peaks` : Shows the results of the `find_peaks` algorithm as ellipsoids.
 
-You can further examine the examples in the repository
+For examples, please see the `examples` directory of this repository. If you have installed ClusterByDensity using either `devtools` or `remotes`, you can also type 
 
+> ?make_opts
+
+into the R command line to get more information about each of the function. There are no vignettes for this package.
+
+## Algorithm Explanation
+
+ !["Algorithm Explanation Gif"](/images/cbd_algo.gif "ClusterByDensityAlgorGif")
+
+
+## Citing this package
+
+You may cite this package as 
+
+```
+@misc{MIW2024,
+  author = {Inglis-Whalen, Matthew},
+  title = {ClusterByDensity},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/MattInglisWhalen/ClusterByDensity}},
+  commit = {4f57d6a0e4c030202a07a60bc1bb1ed1544bf679}
+}
+```
 
