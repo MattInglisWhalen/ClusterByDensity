@@ -103,7 +103,8 @@ flood_fill_peaks <- function(opts, weights, threshold, tol=0.01){
 
   }  # end while
 
-  # all points at threshold should now be true peaks
+
+  # all points in `weights` at threshold should now be true peaks
   # we now just need to collect them into contiguous clusters
 
   # collect pixel constituents for the peaks

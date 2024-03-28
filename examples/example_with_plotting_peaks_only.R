@@ -1,5 +1,4 @@
 
-library('plotrix')
 library('ClusterByDensity')
 
 example_workflow <- function(){

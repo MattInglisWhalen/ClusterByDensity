@@ -198,9 +198,25 @@ plot_heatmap <- function(opts,
   }
   title(main=overtitle)
 
+  # if the opts grid has non-zero data, then we treat that as the density data
+  weights <- opts$grid
+  recalculate <- TRUE
+  for(idx in 1:opts$nY){
+    for(jdx in 1:opts$nX){
+      if(weights[idx,jdx] > 0.5){
+        recalculate <- FALSE
+        break
+      }
+    }
+    if(!recalculate){
+      break
+    }
+  }
+  if(recalculate){
+    w_maxW <- density_on_grid(opts)
+    weights <- w_maxW[[1]]
+  }
 
-  w_maxW <- density_on_grid(opts)
-  weights <- w_maxW[[1]]
 
   for(idx in 1:opts$nY){
     for(jdx in 1:opts$nX){

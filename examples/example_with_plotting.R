@@ -1,11 +1,13 @@
 
-library('plotrix')
 library('ClusterByDensity')
 
 example_workflow <- function(){
 
   # read in some data
   datapoints <- read.csv("sample_point.csv")
+
+  # print(datapoints$x)
+  # plot(datapoints$x,datapoints$y)
 
   # choose the options for our grid
   opts <- make_opts(x_positions = datapoints$x,
