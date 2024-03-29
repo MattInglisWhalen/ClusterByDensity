@@ -62,7 +62,7 @@ There are a further 2 non-core functions that can help visualize the data and pe
 
 5. `plot_peaks` : Shows the results of the `find_peaks` algorithm as ellipsoids.
 
-For examples, please see the `examples` directory of this repository. If you have installed ClusterByDensity using either `devtools` or `remotes`, you can also type 
+For code samples, please see the `examples` directory of this repository. If you have installed ClusterByDensity using either `devtools` or `remotes`, you can also type 
 
 > ?make_opts
 
