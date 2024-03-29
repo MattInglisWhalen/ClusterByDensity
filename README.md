@@ -33,18 +33,13 @@ The package should now be usable.
 
 Option 3) Copy/paste the source files.
 
-Simply copy the four .R files in this repository's `R` directory into your working directory. Uncomment each of the `source` commands at the top of these four files. For clustering only, add
+Simply copy the five .R files in this repository's `R` directory into your working directory. In `cluster_by_density.R`, uncomment all lines. Then at the top of your analysis script, add
 
 ```
-source('cbd_options.R')
-source('cbd_peak_finding.R')
+source('cluster_by_density.R')
 ```
 
-to the top of your analysis code. If you also need purpose-built plotting capabilities, and have also installed the `plotrix` package, also include 
-
-```
-source('cbd_plotting.R')
-```
+All functions in the package should now be available for you to use.
 
 ## Usage
 
