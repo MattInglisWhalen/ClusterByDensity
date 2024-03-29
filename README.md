@@ -1,6 +1,6 @@
 # ClusterByDensity
 
- A package which implements a clustering algorithm for 2D point-spread datasets. Additional functionality includes data visualization through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
+ An R package which implements a clustering algorithm for 2D point-spread datasets. Additional functionality includes data visualization through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
 
  !["Heatmap with overlaid cluster ellipses"](/images/_final_product.png "ClusterByDensitySample")
 
