@@ -1,6 +1,6 @@
 # ClusterByDensity
 
- A package which implements a clustering algorithm for 2D point-spread datasets. Additional functionality includes data visualization through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
+ An R package which implements a clustering algorithm for 2D point-spread datasets. Additional functionality includes data visualization through scatterplots, heatmaps, and superimposed ellipsoidal clusters. 
 
  !["Heatmap with overlaid cluster ellipses"](/images/_final_product.png "ClusterByDensitySample")
 
@@ -33,18 +33,13 @@ The package should now be usable.
 
 Option 3) Copy/paste the source files.
 
-Simply copy the four .R files in this repository's `R` directory into your working directory. Uncomment each of the `source` commands at the top of these four files. For clustering only, add
+Simply copy the five .R files in this repository's `R` directory into your working directory. In `cluster_by_density.R`, uncomment all lines. Then at the top of your analysis script, add
 
 ```
-source('cbd_options.R')
-source('cbd_peak_finding.R')
+source('cluster_by_density.R')
 ```
 
-to the top of your analysis code. If you also need purpose-built plotting capabilities, and have also installed the `plotrix` package, also include 
-
-```
-source('cbd_plotting.R')
-```
+All functions in the package should now be available for you to use.
 
 ## Usage
 
@@ -62,7 +57,7 @@ There are a further 2 non-core functions that can help visualize the data and pe
 
 5. `plot_peaks` : Shows the results of the `find_peaks` algorithm as ellipsoids.
 
-For examples, please see the `examples` directory of this repository. If you have installed ClusterByDensity using either `devtools` or `remotes`, you can also type 
+For code samples, please see the `examples` directory of this repository. If you have installed ClusterByDensity using either `devtools` or `remotes`, you can also type 
 
 > ?make_opts
 
@@ -85,7 +80,7 @@ You may cite this package as
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/MattInglisWhalen/ClusterByDensity}},
-  commit = {4f57d6a0e4c030202a07a60bc1bb1ed1544bf679}
+  commit = {04985076509bb2fca774b5b96d976c3de6a64454}
 }
 ```
 
