@@ -13,7 +13,7 @@ example_workflow <- function(){
   opts <- make_opts(x_positions = datapoints$x,
                     y_positions = datapoints$y,
                     resolution = 0.1,
-                    smear_size = 0.3,
+                    smear_size = 0.205,
                     x_extent = c(-2,2),
                     y_extent = c( 0,3))
 
@@ -21,7 +21,7 @@ example_workflow <- function(){
   # png(filename=sprintf("%s/images/%s.png",getwd(),overtitle))
 
   # find the clusters in the distribution of points
-  peaks <- find_peaks(opts, prop_cutoff = 0.4)
+  peaks <- find_peaks(opts, prop_cutoff = 0.75)
 
   # open a new image and write the heatmap to the image
   plot_heatmap(opts,overtitle="My First Clustering by Density", show_frame=TRUE)

@@ -104,11 +104,18 @@ plot_peaks <- function(peaks,
         slope <- dy /(dx+1e-5)
       }
       else if(nrow(xy)>2){
-        # Thwart zero division error
-        slope <- cov(xs,ys) / (cov(xs,xs)+1e-5)
+        # To ensure rotated coordinates are covariance-free,
+        # need to set
+        # cov(xi, eta) = cos sin [cov(y,y)-cov(x,x)] + [cos^2 - sin^2] cov(x,y)
+        # equal to zero
+        dy <- 2*cov(xs,ys)
+        dx <- cov(xs,xs) - cov(ys,ys)
+        theta <- atan2(dy,dx)/2
+        slope <- tan(theta)
+        # slope <- cov(xs,ys) / (cov(xs,xs)+1e-5)
       }
       else{
-        # do nothing
+        # do nothing, slope = 0
       }
       angle <- atan(slope)
 
