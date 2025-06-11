@@ -35,9 +35,7 @@ Option 3) Copy/paste the source files.
 
 Simply copy the five .R files in this repository's `R` directory into your working directory. In `cluster_by_density.R`, uncomment all lines. Then at the top of your analysis script, add
 
-```
-source('cluster_by_density.R')
-```
+> source('cluster_by_density.R')
 
 ### Plotting
 
