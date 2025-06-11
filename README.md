@@ -6,9 +6,6 @@
 
 ## Installation
 
-If you have no need for visualization then the
-package should be self-contained, but if you want the pretty plots you'll also need to install [plotrix](https://cran.r-project.org/package=plotrix)
-
 Option 1) Use the `devtools` library. 
 
 If you don't have devtools already installed, type
@@ -42,7 +39,12 @@ Simply copy the five .R files in this repository's `R` directory into your worki
 source('cluster_by_density.R')
 ```
 
-All functions in the package should now be available for you to use.
+All functions in the package should now be available for you to use. 
+If you have no need for visualization then the
+package should be self-contained, but if you want the pretty plots you'll also need to install [plotrix](https://cran.r-project.org/package=plotrix), which can be done using the command
+```
+install.packages("plotrix")
+```
 
 ## Usage
 
