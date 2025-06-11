@@ -6,6 +6,9 @@
 
 ## Installation
 
+If you have no need for visualization then the
+package should be self-contained, but if you want the pretty plots you'll also need to install [plotrix](https://cran.r-project.org/package=plotrix)
+
 Option 1) Use the `devtools` library. 
 
 If you don't have devtools already installed, type
