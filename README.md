@@ -35,16 +35,18 @@ Option 3) Copy/paste the source files.
 
 Simply copy the five .R files in this repository's `R` directory into your working directory. In `cluster_by_density.R`, uncomment all lines. Then at the top of your analysis script, add
 
-> source('cluster_by_density.R')
+```
+source('cluster_by_density.R')
+```
 
 ### Plotting
 
 All functions in the package should now be available for you to use. 
 If you have no need for visualization then the
 package should be self-contained, but if you want the pretty plots you'll also need to install [plotrix](https://cran.r-project.org/package=plotrix), which can be done using the command
-```
-install.packages("plotrix")
-```
+
+> install.packages("plotrix")
+
 
 ## Usage
 
